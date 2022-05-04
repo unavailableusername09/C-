@@ -1,0 +1,61 @@
+1.배열 출려
+#include <stdio.h>
+int main()
+{
+	int a[2][2] = { {1,2 }, { 3,4 }};
+	for (int i = 0; i < 2; i++) {
+		for (int j = 0; j < 2; j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+}
+
+
+2.배열값 넣어 출력하기
+#include <stdio.h>
+int main()
+{
+	int a[3][3],k=1;
+
+	//값 넣기
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+			a[i][j] = k++;
+	}
+
+	//출력
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+			printf("%d ",a[i][j]);
+		printf("\n");
+	}
+}
+
+3.행 비우고 배열 넣어 출력
+#include <stdio.h>
+
+int main() {
+	int a[][5] = { {5,8,10,6,4}, {11, 20, 1, 13, 2}, {7, 9, 14, 22, 3}};
+	for (int i = 0; i < 3; i++) {
+		for (int j = 0; j < 5; j++)
+			printf("%2d ", a[i][j]);
+		printf("\n");
+	}
+}
+
+
+
+4.?
+#include <stdio.h>
+
+int main() {
+	int s[][2] = { {1,2},{3,4},{5,6} };
+	int i, j;
+	for (i = 0; i < 3; i++) {
+		for (j = 0; j < 2; j++)
+			printf("%d ", s[i][j]);
+		printf("\n");
+	}
+}

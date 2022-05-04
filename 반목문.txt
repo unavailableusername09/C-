@@ -1,0 +1,132 @@
+3월 28일 반복문
+
+int a=1;
+whille(조건문)
+    printf("%d",a), a++;
+
+1.홀수 출력
+1}
+#include <stdio.h>
+
+int main() {
+	int a = 1;
+	while (a <= 100) {
+		if (a/2*2 != a) {
+			printf("%d\n",a);
+		}
+		a++;
+	}
+}
+
+
+2}
+#include <stdio.h>
+
+void main()
+
+{	
+
+	int n = 0;
+
+	while (n<30) {
+
+		n++;
+
+		if (n % 2 == 0) continue;
+
+		else {
+
+			printf("%d\n", n);
+
+		}
+
+	}
+
+}
+
+2.구구단
+#include <stdio.h>
+
+int main() {
+	int a,b=1;
+	printf("출력하고 싶은 단: ");
+	scanf("%d",&a);
+	while (b<10) {
+		printf("%d*%d=%d\n", a, b, a * b);
+		b++;
+	}
+}
+
+3.f or문을 쓰면 누구보다빠리고 남들과는 다르게 끝나지만 while문은 드릅게 어려운 정수의 합
+#include <stdio.h>
+
+int main() {
+	int a,b=0,c;
+	printf("정수를 입력하시오: ");
+	scanf("%d", &a);
+	c = a;
+	while (a > 0) {
+		b += a;
+		a--;
+	}
+	printf("1부터 %d까지의 합은 %d입니다", c, b);
+}
+
+4.위에꺼 짝수버전
+
+#include <stdio.h>
+
+int main(void) {
+	int n, sum = 0,  i = 0;
+	printf("정수를 입력하시오: ");
+	scanf("%d", &n);
+	while (i < n){
+		sum += i;
+		i += 2;
+	}
+	printf("1부터 %d까지의 짝수의 합은 %d입니다.", n, sum);
+}
+
+3월 29일 반목문(2)
+
+1. 입력받아 총합출력
+#include <stdio.h>
+
+int main() {
+	int a=100,sum=0;
+	while (a != 0) {
+		printf("값을 입력하시오: ");
+		scanf("%d", &a);
+		sum += a;
+	}
+	if (sum != 0)
+		printf("총 합은 %d입니다.", sum);
+}
+
+3월 30일 반목문(3)
+1. 메뉴 선택
+#include <stdio.h>
+int main() {
+	int input;
+	do {
+		printf("1--새로 만들기\n");
+		printf("2--파일 열기\n");
+		printf("3--파일 닫기\n");
+		printf("하나를 선택하세요.\n");
+		scanf("%d", &input);
+	} while (input >3||input<1);
+	printf("선택된 메뉴:%d", input);
+}
+
+2. 1~입력 합
+#include <stdio.h>
+
+int main() {
+	int a, sum = 0;
+	printf("숫자: ");
+	scanf("%d", &a);
+	for (int i = 1; i <= a; i++) {
+		sum += i;
+	}
+	printf("합은 %d", sum);
+}
