@@ -1,0 +1,64 @@
+1. 팩토리얼
+#include <stdio.h>
+int sum = 1;
+
+int fac(int a) {
+	if (a < 1) return sum;
+	fac(a - 1);
+	sum *= a;
+}
+
+int main() {
+	int a;
+	scanf("%d", &a);
+	printf("%d", fac(a));
+}
+
+2.타로카드
+#include <stdio.h>
+
+int sum = 0;
+
+
+
+
+int card(int a) {
+
+	if (a < 1) {
+
+		if (sum > 21)
+
+			return sum - 21;
+
+		else
+
+			return sum;
+
+	}
+
+	sum += a % 10;
+
+	a -= a % 10;
+
+	a /= 10;
+
+	card(a);
+
+}
+
+
+
+
+int main() {
+
+	int y, m, d;
+
+	int a;
+
+	scanf("%04d %02d %02d", &y, &m, &d);
+
+	a = y + m + d;
+
+	printf("%d", card(a));
+
+}
